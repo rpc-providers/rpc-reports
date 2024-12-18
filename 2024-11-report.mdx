@@ -1,11 +1,14 @@
 ## RPC providers report for November 2024
 
-### General Statistics
-- **Connection Times**: Mean = 0.15 s, Std Dev = 0.06 s
-- **Block Retrieval Times**: Mean = 2.67 s, Std Dev = 0.57 s
+### Statistics
 
-| Endpoint                        | Zone         | Network            | Connect Latency (s) | Block Retrieval Latency (s) | Uptime (%) | Binary Version         |
-|---------------------------------|--------------|--------------------|---------------------|----------------------------|------------|------------------------|
+- **Connect Time**: Monthly average time to connect to the websocket endpoint (Mean = 0.15 s, Std Dev = 0.06 s).
+- **Block Retrieval Time**: Monthly average time to retrieve a block from the rpc server (Mean = 2.67 s, Std Dev = 0.57 s).
+- **Uptime**: Monthly uptime percentage were the node was reachable without errors.
+- **Binary Version**: The binary version running at the end of the month.
+
+| Endpoint                        | Zone         | Network            | Average Connect Time (s) | Average Block Retrieval Time (s) | Uptime (%) | Binary Version         |
+|---------------------------------|--------------|--------------------|--------------------------|----------------------------------|------------|------------------------|
 | wss://statemint.api.onfinality.io/public-ws | ap-southeast | polkadot-assethub  | 0.32                | 3.06                       | 99.90      | 1.16.2                 |
 | wss://bridgehub-polkadot.public.curie.radiumblock.co/ws | eu-central   | polkadot-bridgehub | 0.12                | 3.40                       | 98.02      | 1.16.1                 |
 | wss://rockx-ksm.w3node.com/polka-public-ksm/ws | ap-southeast | kusama             | 0.10                | 2.45                       | 100.00     | 1.15.3                 |
