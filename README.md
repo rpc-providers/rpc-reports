@@ -3,12 +3,12 @@
 ## Reports
 Monitoring information can be found [here](https://github.com/rpc-providers/rpc-monitor) and the monitor can be reached [here](https://monitor.rpc-providers.net/d/bdkaq43z8xybka/rpc-providers?orgId=1).
 
-Reports are made monthly by extracting data from the prometheus data source and displaying them in monthly reports using [this script](https://github.com/rpc-providers/rpc-monitor/blob/master/report.sh) 
+Reports are made monthly by extracting data from the prometheus data source and displaying them in monthly reports using [this script](https://github.com/rpc-providers/rpc-monitor/blob/master/report.sh). 
 
 ### Uptime
 The monitoring provides a few possible metrics for calculating uptime:
-* blockzero error: the monitor couldn't retrieve block 0 from the endpoint
-* connect error: the monitor couldn't connect to the wss endpoint
+* blockzero error: the monitor couldn't retrieve block 0 from the endpoint.
+* connect error: the monitor couldn't connect to the wss endpoint.
 * version error: the monitor couldn't retrieve the version information from the endpoint.
  
 Uptime is calculated by blockzero errors. If the monitor can connect but cannot retrieve block information it should be considered an error. 
