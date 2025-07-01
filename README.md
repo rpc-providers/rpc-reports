@@ -23,3 +23,11 @@ Or in promql syntax:
 (1 - (sum_over_time(rpc_error{wss="$endpoint",zone="$zone",network="$network",error="blockzero"}[30d])) / (30 * 24 * 4)) * 100
 ```
 
+### RPC calls
+The number of rpc calls is measured by the sum of increases of the counter "substrate_rpc_calls_started" of a selected chain of a selected job (which is the federated prometheus job of one provider) over the last 30 days (this is not always exactly in sync with 1 month but "good enough" for the purpose of reporting and also helps when comparing months). The reporting is done in millions.
+
+Or in promql syntax:
+
+```
+sum(increase(substrate_rpc_calls_started{chain="$chain",job="$job"}[30d]))
+```
